@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masi Trades - Options Education, Proof First</title>
+<meta name="description" content="7+ years full-time trading. Verified broker statements. Risk management first, strategy second. The structured path into options.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a1a0f;--bg-2:#0f2416;--surface:#14301c;--line:rgba(34,197,94,.18);--text:#f0faf3;--muted:#8fb89a;--accent:#22c55e;--accent-2:#4ade80;--glow:#86efac}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(34,197,94,.02) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:-30%;left:-10%;width:70%;height:80%;background:radial-gradient(circle,rgba(34,197,94,.06) 0%,transparent 60%);pointer-events:none;z-index:0}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{padding:28px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,26,15,.94);backdrop-filter:blur(14px);z-index:100}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.02em}
+.logo span{color:var(--accent-2)}
+.nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#0a1a0f;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px}
+section{padding:100px 0}
+.eyebrow{display:inline-block;padding:6px 14px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.3);border-radius:20px;font-size:12px;font-weight:600;color:var(--accent-2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px}
+h1{font-size:clamp(42px,6vw,74px);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--accent) 0%,var(--glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2{font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
+h3{font-size:22px;font-weight:600;margin-bottom:14px}
+p{color:var(--muted);font-size:17px;max-width:680px}
+.hero{padding-top:80px;text-align:center}
+.hero p{font-size:20px;margin:0 auto 40px;max-width:720px}
+.cta-primary{display:inline-block;padding:18px 38px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#0a1a0f;text-decoration:none;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 10px 40px rgba(34,197,94,.25);transition:.2s}
+.cta-primary:hover{transform:translateY(-2px)}
+.proof-banner{display:inline-flex;align-items:center;gap:10px;padding:8px 20px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:999px;font-size:14px;color:var(--accent-2);font-weight:600;margin-bottom:20px}
+.proof-banner::before{content:'';width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.vsl-box{max-width:900px;margin:60px auto;aspect-ratio:16/9;background:linear-gradient(135deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative}
+.vsl-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(34,197,94,.06) 0%,transparent 60%)}
+.play-btn{width:88px;height:88px;border-radius:50%;background:rgba(34,197,94,.15);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;z-index:1}
+.play-btn svg{width:32px;height:32px;fill:var(--accent-2);margin-left:4px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin:80px 0 0;padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat-num{font-size:40px;font-weight:800;background:linear-gradient(135deg,var(--accent) 0%,var(--glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.03em}
+.stat-label{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:6px}
+.problem-grid,.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+.card{padding:36px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:16px;transition:.3s}
+.card:hover{border-color:rgba(34,197,94,.4);transform:translateY(-4px)}
+.card-num{font-size:14px;color:var(--accent-2);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+.card h3{color:var(--text)}
+.card p{font-size:15px}
+.divider{height:1px;background:linear-gradient(90deg,transparent 0%,var(--line) 50%,transparent 100%)}
+.lead-capture{background:linear-gradient(135deg,rgba(34,197,94,.08) 0%,rgba(74,222,128,.03) 100%);border:1px solid rgba(34,197,94,.2);border-radius:24px;padding:70px 60px;text-align:center;margin:80px 0}
+.lead-capture h2{max-width:640px;margin:0 auto 20px}
+.form-row{display:flex;gap:12px;max-width:520px;margin:36px auto 0}
+.form-row input{flex:1;padding:18px 22px;background:var(--bg);border:1px solid var(--line);border-radius:12px;color:var(--text);font-size:15px;font-family:inherit}
+.form-row input:focus{outline:none;border-color:var(--accent)}
+.form-row button{padding:18px 32px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#0a1a0f;border:none;border-radius:12px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.offer-box{background:linear-gradient(135deg,#0f2416 0%,#1a3d24 100%);border:1px solid rgba(34,197,94,.25);border-radius:24px;padding:60px;margin-top:40px}
+.offer-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.offer-price{font-size:42px;font-weight:800;background:linear-gradient(135deg,var(--accent) 0%,var(--glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.03em;line-height:1.1}
+.offer-price small{font-size:16px;color:var(--muted);font-weight:500;-webkit-text-fill-color:var(--muted);display:block;margin-top:8px}
+.feature-list{list-style:none;margin-top:24px}
+.feature-list li{padding:12px 0;color:var(--text);display:flex;align-items:flex-start;gap:12px;font-size:15px}
+.feature-list li::before{content:'';width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:6px}
+.bio{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;align-items:center}
+.bio-img{aspect-ratio:4/5;background:linear-gradient(135deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:20px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:18px;color:var(--text)}
+.faq-plus{width:24px;height:24px;position:relative;flex-shrink:0}
+.faq-plus::before,.faq-plus::after{content:'';position:absolute;background:var(--accent-2);top:50%;left:50%;transition:.3s}
+.faq-plus::before{width:14px;height:2px;transform:translate(-50%,-50%)}
+.faq-plus::after{width:2px;height:14px;transform:translate(-50%,-50%)}
+.faq-item.open .faq-plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.faq-a{max-height:0;overflow:hidden;transition:.3s}
+.faq-item.open .faq-a{max-height:320px;padding-top:14px}
+.risk-disclosure{background:rgba(34,197,94,.04);border:1px solid rgba(34,197,94,.15);border-radius:12px;padding:20px 26px;margin:40px auto 0;max-width:900px;text-align:left}
+.risk-disclosure p{font-size:13px;color:var(--muted);line-height:1.6;margin:0 auto;max-width:none}
+.footer{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.footer p{margin:0 auto;font-size:14px}
+@media(max-width:768px){.problem-grid,.pillar-grid,.stats{grid-template-columns:1fr}.offer-grid,.bio{grid-template-columns:1fr}.lead-capture,.offer-box{padding:40px 24px}.form-row{flex-direction:column}section{padding:70px 0}.stats{gap:20px}}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style></head><body>
+<nav><div class="container nav-inner"><div class="logo">MASI<span>TRADES</span></div><a href="#apply" class="nav-cta">Apply</a></div></nav>
+
+<section class="hero"><div class="container">
+<div class="proof-banner reveal">VERIFIED STATEMENTS &middot; RISK-FIRST EDUCATION</div>
+<h1 class="reveal">Options Education,<br><em>Proof First</em></h1>
+<p class="reveal">7+ years full-time. Verified broker statements on the website. Risk management first, strategy second. The structured path into options for people who refuse to gamble their savings on a Discord pump chat.</p>
+<div class="vsl-box reveal"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+<a href="#apply" class="cta-primary reveal">See The Proof Page</a>
+<div class="stats reveal">
+<div><div class="stat-num">7+ yr</div><div class="stat-label">Full-Time Trading</div></div>
+<div><div class="stat-num">123K</div><div class="stat-label">Community</div></div>
+<div><div class="stat-num">4</div><div class="stat-label">Core Strategies</div></div>
+<div><div class="stat-num">Daily</div><div class="stat-label">Live Sessions</div></div>
+</div>
+</div></section>
+
+<div class="divider"></div>
+
+<section><div class="container">
+<div class="eyebrow reveal">THE PROBLEM</div>
+<h2 class="reveal">Why Most New Options Traders<br>Blow Up Their Account</h2>
+<p class="reveal" style="font-size:18px">It is almost never bad strategy. It is missing risk management. Three patterns that account for the majority of blown accounts.</p>
+<div class="problem-grid">
+<div class="card reveal"><div class="card-num">PATTERN 01</div><h3>No Position Sizing</h3><p>Taking 10% of the account on a single trade. One bad week cuts the portfolio in half. A 50% loss needs a 100% gain just to break even.</p></div>
+<div class="card reveal"><div class="card-num">PATTERN 02</div><h3>Moving The Stop</h3><p>Hard stop set at entry, then moved "just this once" when the trade goes against you. Small manageable losses become account-ending drawdowns.</p></div>
+<div class="card reveal"><div class="card-num">PATTERN 03</div><h3>Strategy Hopping</h3><p>Twenty half-understood strategies instead of four mastered ones. No system survives a full market cycle if you abandon it after two losing trades.</p></div>
+</div>
+</div></section>
+
+<div class="divider"></div>
+
+<section><div class="container">
+<div class="eyebrow reveal">HOW I TEACH</div>
+<h2 class="reveal">Risk First. Strategy Second.</h2>
+<div class="pillar-grid">
+<div class="card reveal"><div class="card-num">MODULE 01-03</div><h3>Risk Management</h3><p>Position sizing at 1-2% per trade. Hard stop discipline. Maximum drawdown rules. Before any strategy gets introduced, you learn how to survive.</p></div>
+<div class="card reveal"><div class="card-num">MODULE 04-08</div><h3>The Four Strategies</h3><p>Cash-secured puts. Credit spreads. Iron condors. Long calls on defined-risk setups. That is the full playbook. Four strategies mastered beat twenty half-understood.</p></div>
+<div class="card reveal"><div class="card-num">MODULE 09-12</div><h3>Live Execution</h3><p>Daily voice trading sessions. Bi-weekly Q&A webinars. Daily watchlists. Trades review channel. You watch the decision-making process in real time, not after the fact.</p></div>
+</div>
+</div></section>
+
+<div class="divider"></div>
+
+<section><div class="container">
+<div class="eyebrow reveal">THE 9-5 TO FULL-TIME STORY</div>
+<h2 class="reveal">Started Trading On Lunch Breaks.<br>Now I Trade Full-Time.</h2>
+<div class="bio">
+<div class="bio-img reveal">[Masi's photo]</div>
+<div class="reveal">
+<p style="font-size:17px;margin-top:20px">Masi Habibi started trading options in 2018 while working a full-time corporate job. $10,000 starting account. The first 18 months were mostly losses. Two smaller accounts blown. A lot of screen time with nothing to show for it.</p>
+<p style="margin-top:16px">By year two she found a consistent edge. By year three she was trading full-time. She has since hit six-figure account levels multiple times. Her broker statements are on the website permanently, not in an Instagram story that disappears in 24 hours.</p>
+<p style="margin-top:16px">Featured on Friendly Bear "Furu Series" podcast. 123K community on Instagram. Genuine female-forward options education in a niche that needed it.</p>
+</div>
+</div>
+</div></section>
+
+<div class="divider"></div>
+
+<section><div class="container">
+<div class="lead-capture reveal">
+<div class="eyebrow">FREE STARTER GUIDE</div>
+<h2>The Options Trading Starter Guide</h2>
+<p style="margin:0 auto">Risk management fundamentals. The four strategies I actually trade. Position sizing rules. What to do in your first 30 days. Free, no card required.</p>
+<form class="form-row" onsubmit="event.preventDefault();alert('Check your inbox for the Starter Guide.')">
+<input type="email" placeholder="Enter your email" required><button type="submit">Get The Guide</button>
+</form>
+</div>
+</div></section>
+
+<div class="divider"></div>
+
+<section id="apply"><div class="container">
+<div class="eyebrow reveal">ENROLL</div>
+<h2 class="reveal">Three Tiers. Application Based.</h2>
+<div class="offer-box reveal"><div class="offer-grid">
+<div>
+<div class="offer-price">Application Based<small>Payment plans available at every tier</small></div>
+<p style="margin-top:16px">Discord for learners who want to see trades live. Online Options Course for the full risk-first curriculum. 1-on-1 Mentorship for students with larger accounts who want accelerated learning. In-Person Training for mentorship graduates.</p>
+<ul class="feature-list">
+<li>Discord community with live alerts, daily voice sessions, daily watchlists</li>
+<li>Online Options Course with full risk-first curriculum and lifetime access</li>
+<li>1-on-1 Mentorship with personal onboarding, weekly coaching, trade reviews</li>
+<li>In-Person Training for mentorship graduates and referrals</li>
+<li>All tiers application-based with payment plans available</li>
+<li>Proof page with verified broker statements and student outcomes</li>
+<li>Live trade journal updated intraday, not a monthly highlight reel</li>
+</ul>
+</div>
+<div><div style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:16px;padding:32px;text-align:center">
+<div class="eyebrow">STUDENT OUTCOME</div>
+<h3 style="margin-bottom:12px">Priya. Dallas.<br>$18K to $47K. 14 Months.</h3>
+<p style="margin:0 auto 24px">Nurse practitioner. Followed the risk framework. 1.5% per trade sizing. Did not move stops. Above-average result. Not typical.</p>
+<a href="#" class="cta-primary" style="width:100%">Apply Now</a>
+</div></div>
+</div></div>
+</div></section>
+
+<div class="divider"></div>
+
+<section><div class="container" style="max-width:820px">
+<div class="eyebrow reveal">FAQ</div>
+<h2 class="reveal">Common Questions</h2>
+<div style="margin-top:40px">
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Are the broker statements actually verified?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Yes. Broker statements are on the proof page with account numbers redacted. Student outcomes are posted with student permission. If anything does not match what you find elsewhere, DM me directly and I will explain.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Is the Discord just a pump chat?</span><div class="faq-plus"></div></div><div class="faq-a"><p>No. Every trade call includes entry, stop, target, and risk-per-trade sizing. Moderators enforce education over hype. "What's mooning today" posts get removed. Some members leave in the first month because the pace is slower than pump chats. That is intentional.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Do I need a big account to start?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Discord works with any account size. The Online Options Course is best with $5K-plus. 1-on-1 Mentorship is typically for accounts $25K-plus where structured learning compounds meaningfully.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Is this only for women?</span><div class="faq-plus"></div></div><div class="faq-a"><p>No. The community is female-forward in tone, not exclusive. Roughly a third of members are men. Everyone gets the same curriculum and risk framework.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Can I see your current trades before joining?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Yes. The live trade journal is on the proof page. Current positions with entries, stops, targets, and sizing. Updated intraday.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>What about those scam review pages on Google?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Those review sites are run by affiliates who rank for trading educator names and redirect traffic to courses they earn commissions on. The specific claim that I do not show statements is no longer accurate. Check the proof page on masitrades.co directly.</p></div></div>
+</div>
+<div class="risk-disclosure"><p><strong style="color:var(--text)">Risk Disclosure:</strong> Trading options involves substantial risk of loss and is not suitable for every investor. Past performance does not indicate future results. Results shown are reported student outcomes and are not typical. Educational content on this site is not personalised financial advice. Consult your own financial advisor before acting on anything taught inside Masi Trades.</p></div>
+</div></section>
+
+<section style="text-align:center"><div class="container">
+<h2 class="reveal">Ready To Learn Options<br>The Right Way?</h2>
+<p class="reveal" style="margin:20px auto 40px">Risk framework first. Strategy second. Proof on the page. Apply below.</p>
+<a href="#apply" class="cta-primary reveal">Apply Now</a>
+</div></section>
+
+<footer class="footer"><div class="container"><p>&copy; 2026 Masi Trades. Los Angeles. Trading involves risk. Results not typical.</p></div></footer>
+<script>const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));</script>
+</body></html>
